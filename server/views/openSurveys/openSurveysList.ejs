@@ -1,0 +1,41 @@
+<%- include ../partials/header.ejs %>
+
+<%- include ../partials/main_nav.ejs %>
+  
+
+  <!-- Main Content -->
+  <main class="container">
+    <div class="jumbotron">
+      <h1 class="display-4"><%= title %></h1>
+    </div>
+
+      <div class="container">
+
+        <table class="table table-bordered table-striped table-hover mt-3">
+          <!-- Header Row-->
+          <tr class="d-flex">
+              <th class="text-center col-3">Survey Name</th>
+              <th class="text-center col-3">Author</th>
+              <th class="text-center col-3">Date Added</th>
+              <th class="text-center col-3">Expiry Date</th>
+          </tr>
+
+          <!-- Repeatable Template Row -->
+
+          <% for(let count = 0; count < Surveys.length; count++) { %>
+              <tr class="d-flex">
+                  <td class="text-center col-3"><a href="/openSurveysList/<%= Surveys[count]._id %>"><%= Surveys[count].surveyName %></a></td>
+                  <td class="text-center col-3"><%= Surveys[count].authorName %></td>
+                  <td class="text-center col-3"><%= Surveys[count].authorPubDate.toDateString() %></td>
+                  <td class="text-center col-3"><%= Surveys[count].expiryDate.toDateString() %></td>
+              </tr>
+          <% } %>
+      </table>
+
+    </div>
+
+  </main>
+  
+<%- include ../partials/bottom_nav.ejs %>  
+
+<%- include ../partials/footer.ejs %>

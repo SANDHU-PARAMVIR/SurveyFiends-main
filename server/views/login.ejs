@@ -1,0 +1,29 @@
+<%- include partials/header.ejs %>
+
+<%- include partials/main_nav.ejs %>
+  
+
+  <!-- Main Content -->
+  <main class="custom-container bg-default container-fh">
+    <form class="form-s1" method="POST" enctype="application/x-www-form-urlencoded">
+      <h1 class="form-title">Sign In</h1>
+      <div class="inner">
+        <p class="label">Email</p>
+        <input name="email" type="email" class="textbox" placeholder="johndoe@example.com"/>
+        <p class="label">Password</p>
+        <input name="password" type="password" class="textbox" placeholder="Password"/>
+      </div>
+      <p class="status-text"><%= statusText %></p>
+      <input class="btn" type="submit" value="Login"/>
+      <a class="form-swap" href="/users/register">Don't have an Account? Sign Up.</a>
+    </form>
+  </main>
+  
+<%- include partials/bottom_nav.ejs %>  
+
+<%- include partials/footer.ejs %>
+  
+
+
+
+

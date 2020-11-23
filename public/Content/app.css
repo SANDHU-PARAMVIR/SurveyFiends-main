@@ -1,0 +1,291 @@
+/* custom css goes here */
+
+.custom-container{
+    margin:0 auto;
+}
+
+.hr-s1{
+    border:none;
+    height:1px;
+    max-width:70%;
+    margin-left:auto;
+    margin-right:auto;
+    background:#ddd;
+}
+
+.intro-text{
+    margin-top:30px;
+    padding:20px;
+    background:#eee;
+    border-radius:10px;
+}
+
+.custom-container-shrink{
+    max-width:1000px;
+    margin:0 auto;
+}
+
+.section{
+    margin:80px auto;
+}
+
+.section:first-of-type{
+    margin-top:0;
+}
+
+.section:last-of-type{
+    margin-bottom:0px;
+}
+
+.section-title{
+    font-size:58px;
+    text-align:center;
+    margin-bottom:40px;
+}
+
+.section-title .fas{
+    color:#c00;
+}
+
+.about-us{
+    text-align:center;
+    padding:60px 20px;
+}
+
+.about-us-item{
+    display:inline-block;
+    width:400px;
+    text-align:center;
+    padding:20px;
+    margin:30px;
+    background:#444;
+    transition:background-color 0.3s;
+    border-radius:10px;
+    color:white;
+    box-shadow:0px 0px 20px -8px rgba(0,0,0,0.5);
+}
+
+.about-us-item:hover{
+    background:#222;
+}
+
+.about-us-item .avatar img{
+    max-width:130px;
+    height:auto;
+}
+
+.about-us-item .info-item{
+    margin-top:20px;
+    font-size:20px;
+}
+
+.about-us-item .info-item strong{
+    font-size:24px;
+}
+
+.intro-section{
+    background:url(../Images/bg.jpg);
+    padding:50px 20px;
+}
+
+.intro-section .inner{
+    background-image:linear-gradient(90deg, rgba(84, 195, 225, 0.8), rgba(107, 195, 120, 0.8));
+    border-radius:10px;
+    color:white;
+    padding:50px 20px;
+    max-width:600px;
+    text-align:center;
+    margin:50px auto;
+}
+
+.intro-section .inner p{
+    margin:40px auto;
+    color:#eee;
+    font-size:20px;
+}
+
+.btn-s1{
+    display:inline-block;vertical-align:top;
+    border:2px solid white;
+    padding:15px;
+    text-decoration: none;
+    color:white;
+    font-size:18px;
+    transition:background-color 0.3s;
+    margin-left:15px;
+    margin-right:15px;
+}
+
+.btn-s1:hover{
+    background-color:rgba(255,255,255,0.2);
+    text-decoration:none;
+    color:white;
+}
+
+.lg-1{background-image:linear-gradient(90deg, rgba(84, 195, 225, 0.8), rgba(107, 195, 120, 0.8));}
+
+.tb-s1{
+    display:inline-block;vertical-align:top;
+    border:2px solid white;
+    padding:15px;
+    background:transparent;
+    text-decoration: none;
+    color:white;
+    font-size:18px;
+    transition:background-color 0.3s;
+    margin-left:15px;
+    margin-right:15px;
+    outline:none;
+}
+
+.tb-s1::placeholder{
+    color:#fff;
+}
+
+.tb-s1:focus{
+    background-color:rgba(255,255,255,0.2);
+    text-decoration:none;
+}
+.nl-sub{
+    border-radius:10px;
+    padding:20px;
+    text-align:center;
+}
+
+footer{
+    margin-top:55px;
+}
+
+.t-center{
+    text-align:center;
+}
+
+.border-round{
+    border-radius:5px;
+}
+
+/* CONTACT WIDGET */
+
+.section-contact{
+    background:#333;
+}
+
+.contact-widget{
+    text-align:center;
+}
+
+.contact-widget .contact-item{
+    display:inline-block;
+    margin:30px auto;
+    vertical-align:top;
+    width:280px;
+    padding:40px;
+}
+
+.contact-widget .contact-item:nth-of-type(2){
+    border-left:1px solid #ddd;
+    border-right:1px solid #ddd;
+}
+
+.contact-widget .feature-img{
+    margin-bottom:30px;
+}
+
+.contact-widget .feature-img img{
+    max-width:100px;
+    height:auto;
+}
+.form-checked
+{
+    border: black;
+}
+
+/* FORM */
+
+.form-s1{
+    max-width:500px;
+    margin:80px auto;
+    background-image:linear-gradient(90deg, rgba(84, 195, 225, 0.8), rgba(107, 195, 120, 0.8));
+    padding:20px;
+    border-radius: 10px;
+}
+
+.form-s1 .form-title{
+    font-size:48px;
+    color:white;
+}
+
+.form-s1 .inner{
+    padding-top:20px;
+}
+
+.form-s1 .label{
+    margin-bottom:5px;
+    color:white;
+    margin-top:20px;
+}
+
+.form-s1 .textbox{
+    border:none;
+    color:black;
+    background:rgba(255,255,255,0.4);
+    padding:10px;
+    max-width:300px;
+    width:100%;
+    border-radius:5px;
+    transition:background-color 0.2s;
+    outline:none;
+}
+
+.form-s1 .textbox::placeholder{
+    color:#555;
+}
+
+.form-s1 .textbox:focus{
+    color:#000;
+    background:rgba(255,255,255,0.6);
+}
+
+.form-s1 .btn{
+    background:rgba(255,255,255,0.3);
+    margin-top:0px;
+    color:white;
+    padding:15px;
+    border-radius:5px;
+    font-weight:bold;
+    transition:background-color 0.2s;
+}
+
+.form-s1 .btn:hover{
+    background:rgba(255,255,255,0.4);
+}
+
+.bg-default{
+    padding:5px;
+    background:url('../Images/bg.jpg');
+    background-size:cover;
+    background-attachment: fixed;
+}
+
+.container-fh{
+    position:relative;
+    min-height:85vh;
+}
+
+.form-swap{
+    display:block;
+    color:white;
+    margin-top:15px;
+}
+
+.form-swap:hover{
+    text-decoration:underline;
+    color:white;
+}
+
+.form-s1 .status-text{
+    text-align:left;
+    color:white;
+    font-weight:bold;
+    margin:20px auto;
+}

@@ -1,0 +1,67 @@
+<%- include ../partials/header.ejs %>
+
+<%- include ../partials/main_nav.ejs %>
+  
+    <!-- MAIN CONTENT -->
+    <div class="container">
+      <h1><%= title %></h1>
+      <div class="row mt-3">
+        <div class="col-md-offset col-md-5 pr-4">
+          <h2>Survey Details</h2>
+          <% if(title === "Add New Survey") { %> 
+          <p class="text-secondary">Thank you for using our survey creator.
+            <br>We currently only allow True or False questions.
+            <br>The surveys created will be available for 30 days after which only the creator will have access to it.</p>
+          <% } %>
+
+          <div class="px-4">
+            <form class="form" method="post">
+
+              <div class="form-group">
+                <label for="surveyNameTextField">Survey Name</label>
+                <input type="text" class="form-control" id="surveyNameTextField"
+                placeholder="Survey Name" name="name" value="<%= SurveyList.surveyName %>" required>
+              </div>
+              
+              <div class="form-group">
+                <label for="surveyAuthorTextField">Author Name</label>
+                <input type="text" class="form-control" id="surveyAuthorTextField"
+                placeholder="Survey Author" name="author" value="<%= SurveyList.authorName %>" required>
+              </div>
+
+              <button type="submit" class="btn btn-primary"><i class="fa fa-check-square-o"></i> Submit</button>
+              <a href="/survey-list" class="btn btn-warning"><i class="fa fa-undo"></i> Cancel</a>
+              <% if (SurveyList.surveyName != null && SurveyList.authorName != null) { %>
+              <% } %>
+              
+            </form>
+          </div>
+        </div>
+
+        <% if (title == "Edit Survey Details") { %>
+          <div class="col-md-offset col-md-7">
+            <div class="row">
+              <h2>Survey Questions</h2>
+              <a href="/survey-list/<%= SurveyList._id %>/addQuestions" class="btn btn-primary rounded-circle h-50 ml-5"><i class="fa fa-plus"></i></a>
+            </div>
+            <% for(let count = 0; count < Questions.length; count++){ %>
+              <div class="row px-4">
+                <h4>Question <%= Questions[count].questionsNumber %></h1>
+              </div>
+              <div class="row px-4">
+                <p class="col-10"><%=Questions[count].question%></p>
+                <a href="/survey-list/<%= SurveyList._id %>/editQuestions/<%= Questions[count]._id %>" class="col-1">edit</a>
+                <a href="/survey-list/deleteQuestion/<%= SurveyList._id %>/<%= Questions[count]._id %>" class="col-1">delete</a>
+              </div>
+            <% } %>
+          </div>          
+        <% } %>
+        
+      </div>
+    </div>
+
+    <%- include ../partials/bottom_nav.ejs %>  
+
+    <%- include ../partials/footer.ejs %>
+      
+    

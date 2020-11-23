@@ -1,0 +1,33 @@
+<%- include partials/header.ejs %>
+
+<%- include partials/main_nav.ejs %>
+  
+
+  <!-- Main Content -->
+  <main class="custom-container bg-default">
+    <form class="form-s1" method="POST" enctype="application/x-www-form-urlencoded">
+      <h1 class="form-title">Sign Up</h1>
+      <div class="inner">
+        <p class="label">Name</p>
+        <input name="name" type="text" class="textbox" placeholder="John Doe"/>
+        <p class="label">Email</p>
+        <input name="email" type="email" class="textbox" placeholder="johndoe@example.com"/>
+        <p class="label">Password</p>
+        <input name="password" type="password" class="textbox" placeholder="Password"/>
+        <p class="label">Confirm Password</p>
+        <input name="cpassword" type="password" class="textbox" placeholder="Confirm Password"/>
+      </div>
+      <p class="status-text"><%= statusText %></p>
+      <input class="btn" type="submit" value="Register"/>
+      <a class="form-swap" href="/users/login">Already Registered? Log In.</a>
+    </form>
+  </main>
+  
+<%- include partials/bottom_nav.ejs %>  
+
+<%- include partials/footer.ejs %>
+  
+
+
+
+

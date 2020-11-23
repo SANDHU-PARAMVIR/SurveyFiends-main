@@ -1,0 +1,39 @@
+<%- include ../partials/header.ejs %>
+
+<%- include ../partials/main_nav.ejs %>
+  
+
+  <!-- Main Content -->
+  <main class="container">
+    <div class="jumbotron">
+      <h2 class="row display-4"><%= Survey.surveyName %></h2>
+      <hr>
+      <h4 class="row display-5 text-secondary justify-content-end">By: <%= Survey.authorName %> </h4>
+    </div>
+    <form method="post">
+      <!-- <input type="hidden" name="surveyId" value="<%= Survey._id %> "> -->
+      <% for( let index = 0; index < Questions.length; index++ ) { %>
+        <div class="form-group">
+          <h4>Question <%= Questions[index].questionsNumber %> </h4>
+          <p class="pl-4"><%= Questions[index].question %> </p>
+
+          <input type="hidden" name="question<%= index %>" value="<%= Questions[index]._id %>">
+
+          <label class="" for="t<%= index %>">True</label>
+          <input type="radio" id="t<%= index %>" name="q<%= index %>" class="form-checked" value="true" required>
+                                                  <!-- q<%= index %> is there to avoid grouping all possible radio buttons into one -->
+          <label class="" for="f<%= index %>">False</label>
+          <input type="radio" id="f<%= index %>" name="q<%= index %>" class="form-checked" value="false" required>
+        </div>
+        <br>
+        <% } %>
+
+        <button type="submit" id="surveyComplete" class="btn btn-primary"><i class="fa fa-check-square-o"></i> Submit</button>
+        <a href="/openSurveysList" class="btn btn-warning"><i class="fa fa-undo"></i> Cancel</a>
+    </form>
+  </main>
+  
+<%- include ../partials/bottom_nav.ejs %>  
+
+<%- include ../partials/footer.ejs %>
+  
